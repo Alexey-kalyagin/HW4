@@ -1,9 +1,8 @@
 ﻿ // Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
 
-
-
-
+ 
     int [] array = new int [5];
+   
     array [0] = 1;
     array [1] = 2;
     array [2] = 5;
@@ -19,5 +18,4 @@ static void WrireArray (int [] array)
 }     
 
     WrireArray(array);
-
-
+    Console.WriteLine(" ");
