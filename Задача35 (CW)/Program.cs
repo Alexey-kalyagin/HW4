@@ -13,6 +13,13 @@ static int [] CreaterArray (int number)
     }
     return array;
 }
+static void WrireArray (int[] array)
+{
+    for(int i=0; i<array.Length;i++)
+    {
+        Console.Write(array[i] + ", ");
+    }
+}
 static int [] Shuffle (int[]array)
 {
     for (int i=0; i<array.Length;i++)
@@ -24,13 +31,20 @@ static int [] Shuffle (int[]array)
     }
     return array;
 }
-static void WrireArray(int[] array)
+static int SortArray (int[]array)
 {
-    for (int i=9;i<99;i++)
+    int result = 0;
+    for(int i=0;i<array.Length;i++)
     {
-        Console.Write(array[i]+ " ");
+        if (array[i]>=10 && array[i]<=100)
+        {
+            result = result + 1;
+        }
     }
+    return result;
+    
 }
+
 static void Main (string[] args)
 {
     int[] array = CreaterArray(123);
@@ -38,5 +52,10 @@ static void Main (string[] args)
     Console.WriteLine(" ");
     array = Shuffle(array);
     WrireArray (array);
+    Console.WriteLine(" ");
+    int result = SortArray (array);
+    Console.WriteLine(result);
+   
 }
+
 }
